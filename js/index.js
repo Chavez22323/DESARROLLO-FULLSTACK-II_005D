@@ -114,11 +114,29 @@ function mostrarProductos(productos) {
           <li class="list-group-item"><strong>Precio:</strong> ${producto.precio ? producto.precio + ' ' + producto.unidad : 'Consultar'}</li>
           <li class="list-group-item"><strong>Stock:</strong> ${producto.stock !== null ? producto.stock : 'Consultar'}</li>
         </ul>
-        <a href="#" class="btn btn-primary mt-3">Agregar al carrito</a>
+        <a class="btn btn-primary mt-3" onclick='addCart(${JSON.stringify(producto)})'>Agregar al carrito</a>
       </div>
     </div>
     `;
 }
+}
+function addCart(producto) {
+  console.log("cambio", producto);
+
+  const carro = JSON.parse(localStorage.getItem("carritoCompras")) || [];
+
+  const item = carro.find((p) => p.codigo === producto.codigo);
+
+  if (item) {
+    item.cantidad += 1;
+  } else {
+    carro.push({ ...producto, cantidad: 1 });
+  }
+
+  localStorage.setItem("carritoCompras", JSON.stringify(carro));
+
+  alert("Producto agregado al carrito");
+  console.log(carro);
 }
 
 mostrarProductos(productosInicial);

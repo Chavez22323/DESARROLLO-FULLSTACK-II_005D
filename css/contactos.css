@@ -1,3 +1,22 @@
+  /* Asegura altura total y layout en columna */
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh; /* usa 100vh si prefieres, 100dvh corrige barras móviles */
+  }
+
+  main { /* ocupa el espacio disponible */
+    flex: 1 0 auto;
+  }
+
+  footer {
+    margin-top: auto;    /* clave: empuja el footer al final */
+    background: #111;
+    color: #fff;
+    padding: 16px;
+  }
+
 .login-box {
     background: white;
     padding: 30px;
