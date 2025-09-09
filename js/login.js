@@ -5,6 +5,7 @@
     const errorMsg = document.getElementById('error');
 
     form.addEventListener('submit', function(event) {
+        event.preventDefault();
       errorMsg.textContent = ''; 
 
       if (passwordInput.value.length < 8) {
@@ -19,7 +20,7 @@
         event.preventDefault();
         return;
       }
-      window.location.href = '/index.html';
+      window.location.href = 'index.html';
       localStorage.setItem('usuario', emailInput.value);
       alert('Inicio de sesión exitoso');
     });
