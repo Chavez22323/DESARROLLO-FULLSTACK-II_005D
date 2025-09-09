@@ -17,22 +17,43 @@
     <div class="col-8 d-flex justify-content-center align-items-center"><nav>
     <a href="/story.html">Nuestra Historia</a>
     <a href="/catalogo.html">Catálogo</a>
-    <a href="/contacto.html">Contacto</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 </div>
     <div class="col-2 d-flex align-items-center justify-content-end"> <a href="/login.html" class="login">Iniciar Sesión</a></div>
   </header>
-  <section class="seccion-princ d-flex flex-column justify-content-center align-items-center text-center">
-    <h1>Bienvenido a HuertoHogar</h1>
-    <p>Tu tienda online de confianza para productos de jardinería y agricultura urbana.</p>
-    <a href="/catalogo.html" class="btn btn-success btn-lg mt-3">Explorar Catálogo</a>
+  <section class="container d-flex row mx-auto">
+    <h1 class="text-center my-5">Catálogo de Productos</h1>
+    <div class="col-6">
+    <nav>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#"><</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">></a></li>
+  </ul> 
+</nav>
+    </div>
+
+<div class="col-6">
+    <select class="form-select" aria-label="Default select example" id="filtro">
+  <option selected>Seleccionar categoria</option>
+  <option value="Frutas Frescas">Frutas Frescas</option>
+  <option value="Verduras Orgánicas">Verduras Orgánicas</option>
+  <option value="Productos Orgánicos">Productos Orgánicos</option>
+    <option value="Productos Lácteos">Productos Lácteos</option>
+</select>
+</div>
   </section>
+  <section id="catalogo" class="container d-flex row mx-auto ">
 
-
+  </section>
 <footer>
     <div class="text-center p-3 mt-0">
         <p>&copy; 2024 HuertoHogar. Todos los derechos reservados.</p>
 </footer>
 </body>
+<script src="index.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
