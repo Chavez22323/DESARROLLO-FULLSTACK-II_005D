@@ -20,5 +20,6 @@
         return;
       }
       window.location.href = '/index.html';
+      localStorage.setItem('usuario', emailInput.value);
       alert('Inicio de sesión exitoso');
     });

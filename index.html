@@ -6,6 +6,7 @@
   <title>HuertoHogar — Tienda Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/carrito.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -14,14 +15,30 @@
     <div class="col-2 d-flex align-items-center justify-content-start">
         <a href="/index.html"><img src="https://res.cloudinary.com/dzktjoix0/image/upload/v1757376907/huerto_hogar_transparent_z90f1m.png" alt="logo"></a>
     </div>
-    <div class="col-8 d-flex justify-content-center align-items-center"><nav>
+    <div class="col-5 d-flex justify-content-center align-items-center"><nav>
     <a href="/story.html">Nuestra Historia</a>
     <a href="/catalogo.html">Catálogo</a>
     <a href="/contactos.html">Contacto</a>
   </nav>
 </div>
-    <div class="col-2 d-flex align-items-center justify-content-end"> <a href="/login.html" class="login">Iniciar Sesión</a></div>
+    <div class="col-5 d-flex align-items-center justify-content-end" id="user"> <a href="/login.html" class="login">Iniciar Sesión</a></div>
   </header>
+  
+<button class="cart-toggle" id="openCartBtn" aria-haspopup="dialog" aria-controls="cartDrawer" aria-expanded="false">
+🛒 Abrir carrito
+</button>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+<header>
+<h2 id="cartTitle">Tu carrito</h2>
+<button class="icon-btn" id="closeCartBtn" aria-label="Cerrar carrito">✕</button>
+</header>
+
+
+<div class="content" id="cartContent">
+
+</div>
+
+</aside>
   <section class="seccion-princ d-flex flex-column justify-content-center align-items-center text-center">
     <h1>Bienvenido a HuertoHogar</h1>
     <p>Tu tienda online de confianza para productos de jardinería y agricultura urbana.</p>
@@ -34,5 +51,7 @@
         <p>&copy; 2024 HuertoHogar. Todos los derechos reservados.</p>
 </footer>
 </body>
+<script src="/js/carrito.js"></script>
+<script src="/js/usuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
